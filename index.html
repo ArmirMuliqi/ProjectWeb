@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Time</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For icons -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <h1>Party Time</h1>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <h2>PARTY-TIME</h2>
+                <p>Your go-to solution for unforgettable parties and events.</p>
+                <button class="cta" onclick="scrollToSection('services')">Learn More</button>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <img src="R.jpg" alt="Themed Events">
+                    <h3>Themed Events</h3>
+                    <p>We create unforgettable themed events tailored to your preferences.</p>
+                </div>
+                <div class="card">
+                    <img src="52b3ac4c618e8.jpeg" alt="Marquee Parties">
+                    <h3>Marquee Parties</h3>
+                    <p>Enjoy our luxurious marquee parties with custom decorations and settings.</p>
+                </div>
+                <div class="card">
+                    <img src="Essex-Luxury-Marquee-Party.webp" alt="Special Celebrations">
+                    <h3>Special Celebrations</h3>
+                    <p>Celebrate your special moments with our bespoke celebration services.</p>
+                </div>
+                <div class="card">
+                    <img src="5256471-1280_526833490-1540181_l.jpg" alt="Entertainment">
+                    <h3>Entertainment</h3>
+                    <p>Top-notch entertainment services including DJs, live bands, and magicians.</p>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <section id="packages">
+            <h2>Our Packages</h2>
+            <div class="packages-layout">
+                <div class="package bronze">
+                    <h3>Bronze Package</h3>
+                    <ul>
+                        <li>Room decorations – balloons, banners</li>
+                        <li>Table decorations – centrepieces, gifts</li>
+                        <li>DJ entertainment</li>
+                        <li>Cold buffet</li>
+                    </ul>
+                </div>
+                <div class="package silver">
+                    <h3>Silver Package</h3>
+                    <ul>
+                        <li>All from Bronze package plus:</li>
+                        <li>Invitation design and handling</li>
+                        <li>Party cost clean up</li>
+                        <li>Live band entertainment</li>
+                        <li>Cold buffet and soft drinks</li>
+                    </ul>
+                </div>
+                <div class="package gold">
+                    <h3>Gold Package</h3>
+                    <ul>
+                        <li>All from Silver package plus:</li>
+                        <li>Expert in attendance to ensure complete perfection</li>
+                        <li>Arranging guest accommodation, booking transport</li>
+                        <li>Live band entertainment and magician</li>
+                        <li>Hot and Cold buffet and soft drinks</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Our Office</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Party Street, Fun Town</p>
+                    <p><i class="fas fa-phone-alt"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@partytime.com</p>
+                    <div id="map" style="width: 100%; height: 200px;"></div>
+                </div>
+                <form id="contactForm" onsubmit="return validateForm()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>How do I place an order?</h3>
+                <p>To place an order, simply visit our Shop section, decide what you want to purchase, then contact Us using our Phone number in ContactUS section.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What payment methods do you accept?</h3>
+                <p>We accept all major credit cards, PayPal, and bank transfers.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does shipping take?</h3>
+                <p>Shipping times vary depending on your location. Typically, orders are delivered within 3-5 business days.</p>
+            </div>
+            <!-- Add more FAQ items as needed -->
+        </div>
+    </section>
+    <section id="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-container">
+            <div class="review">
+                <p class="review-text">"Party Time hosted the most incredible birthday party! The decorations were stunning, and the entertainment was exceptional. I highly recommend their services!"</p>
+                <p class="review-author">- Suny.</p>
+            </div>
+            <div class="review">
+                <p class="review-text">"Amazing service! Party Time made our corporate event a huge success. The team was professional and attentive to all our needs. Highly recommended!"</p>
+                <p class="review-author">- Lisa.Mal.</p>
+            </div>
+            <div class="review">
+                <p class="review-text">"Exceptional service! Party Time ensured our corporate event was an outstanding success. The team was highly professional and catered to all our requirements. Highly recommend them!"</p>
+                <p class="review-author">- Evelyn.</p>
+            </div>
+            <div class="review">
+                <p class="review-text">"Fantastic experience! Thanks to Party Time, our corporate event was flawless. The team was incredibly professional and responsive to all our needs. Would definitely recommend!"</p>
+                <p class="review-author">- Jon.S.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="sitemap">
+            <h3></h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                
+                
+                
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                
+                
+            </ul>
+        </div>
+        
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
